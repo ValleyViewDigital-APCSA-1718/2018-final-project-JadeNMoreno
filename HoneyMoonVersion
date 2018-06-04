@@ -43,17 +43,20 @@ public class HoneyMoonVersion extends WeddingVersion
    public void cycle3() 
    {
        //Removes a transportation until only one left
-       for (int i = 0; transportation.size() > 1; i++) {
+       for (int i = 0; transportation.size() > 1; i++) 
+       {
            transportation.remove((int)(Math.random() * 5));//Fixed I think
        }//Ends transportation Remover While
 
        //Removes a placeStaying until one left
-       for (int i = 0; placeStaying.size() > 1; i++) {
+       for (int i = 0; placeStaying.size() > 1; i++)
+       {
            placeStaying.remove((int)(Math.random() * 2));
        }//Ends placeStaying Remover
 
        //Removes a numberOfDays until one left
-       for (int i = 0; 1 < numberOfDays.size(); i++) {
+       for (int i = 0; 1 < numberOfDays.size(); i++)
+       {
            numberOfDays.remove((int)(Math.random() * 3));
        }//Ends numberOfDays Remover
    }//Ends Cycle Method With All Removing Whiles With Ifs
