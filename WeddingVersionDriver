@@ -1,0 +1,67 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * WeddingVersionDriver
+**/
+
+import java.util.Scanner;
+
+public class WeddingVersionDriver 
+{
+   public static void main(String[] args) 
+   {
+       Scanner Scan2 = new Scanner(System.in);// Allows interactive mode
+
+       //Location for Wedding Section
+       System.out.println("Enter your first Location for the Wedding: ");
+       String LW1 = Scan2.nextLine();// Allows player to fill ArrayList
+       System.out.println("Enter your second Location for the Wedding: ");
+       String LW2 = Scan2.nextLine();
+       System.out.println("Enter your third Location for the Wedding: ");
+       String LW3 = Scan2.nextLine();
+
+       //Spouse to Marry Section
+       System.out.println("Enter your first Spouse to Marry: ");
+       String SW1 = Scan2.nextLine();
+       System.out.println("Enter your second Spouse to Marry: ");
+       String SW2 = Scan2.nextLine();
+       System.out.println("Enter your third Spouse to Marry: ");
+       String SW3 = Scan2.nextLine();
+
+       //Wedding Favor Section
+       System.out.println("Enter your first Wedding Favor: ");
+       String WF1 = Scan2.nextLine();
+       System.out.println("Enter your second Wedding Favor: ");
+       String WF2 = Scan2.nextLine();
+       System.out.println("Enter your third Wedding Favor: ");
+       String WF3 = Scan2.nextLine();
+
+       //Wedding Favor Section
+       System.out.println("Enter your first Type of Flower: ");
+       String F1 = Scan2.nextLine();
+       System.out.println("Enter your second Type of Flower: ");
+       String F2 = Scan2.nextLine();
+       System.out.println("Enter your third Type of Flower: ");
+       String F3 = Scan2.nextLine();
+
+       //Kids at Wedding Section
+       System.out.println("Enter your first Number of Guests at Wedding: ");
+       int G1 = Scan2.nextInt();
+       System.out.println("Enter your second Number of Guests at Wedding: ");
+       int G2 = Scan2.nextInt();
+       System.out.println("Enter your third Number of Guests at Wedding: ");
+       int G3 = Scan2.nextInt();
+
+       //Kids at Wedding Section
+       System.out.println("Enter your first Number of Kids at Wedding: ");
+       int KW1 = Scan2.nextInt();
+       System.out.println("Enter your second Number of Kids at Wedding: ");
+       int KW2 = Scan2.nextInt();
+       System.out.println("Enter your third Number of Kids at Wedding: ");
+       int KW3 = Scan2.nextInt();
+
+       MASH game2 = new WeddingVersion(LW1, LW2, LW3, SW1, SW2, SW3, KW1, KW2, KW3, WF1, WF2, WF3, F1, F2, F3, G1, G2, G3);//Creates the object so the player can recieve results
+       System.out.println(game2.toString() + "\n" + "\n" + "Way Language Is Used At Wedding: " + game2.language());// Prints results
+   }//End Method Main
+}//End WedddingVersionDriver
