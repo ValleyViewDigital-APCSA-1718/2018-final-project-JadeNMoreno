@@ -1,0 +1,31 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * Proposal
+**/
+
+What Is Your Life?
+M.A.S.H
+with Special Editions
+
+Project Summary: 
+This will be an interactive game that determines the player’s future. 
+It will use an ArrayList for the player to input values into each category by the add method. 
+It will then remove a value in a pattern after each category has been filled out. 
+It will then return the last value left with a loop or if statement as well. 
+This game provides the player with a fun way to predict their future. 
+It contains multiple different versions of MASH. 
+The player will able to predict their basic future, their wedding, or their honeymoon. 
+These classes are all related due to inheritance, so they have the ability to use the super class as it runs. 
+There as well is an abstract class with a method that will tell the player how a language is being used at event or in life. 
+This will change based on what version of MASH is being played.
+
+Screenshots: 
+	Enter your first Spouse: 
+
+	Enter your second Spouse:
+
+	Enter your third Spouse:
+
+	//This will continue with different categories of each version.
