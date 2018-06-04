@@ -1,0 +1,12 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * Interface
+**/
+
+public interface Interface
+{
+    public String toString();//used in all classes
+    public String language();//used in all classes
+}//Ends Interface Class
