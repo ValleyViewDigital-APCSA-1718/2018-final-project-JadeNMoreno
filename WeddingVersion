@@ -42,17 +42,20 @@ public class WeddingVersion extends MASH
    public void cycle2() 
    {
        //Removes a weddingFavors until only one left
-       for (int i = 0; weddingFavors.size() > 1; i++) {
+       for (int i = 0; weddingFavors.size() > 1; i++)
+       {
            weddingFavors.remove((int)(Math.random() * 5));//Fixed I think
        }//Ends weddingFavors Remover While
 
        //Removes a Flowers until one left
-       for (int i = 0; Flowers.size() > 1; i++) {
+       for (int i = 0; Flowers.size() > 1; i++) 
+       {
            Flowers.remove((int)(Math.random() * 2));
        }//Ends Flowers Remover
 
        //Removes a numberOfGuests until one left
-       for (int i = 0; 1 < numberOfGuests.size(); i++) {
+       for (int i = 0; 1 < numberOfGuests.size(); i++) 
+       {
            numberOfGuests.remove((int)(Math.random() * 3));
        }//Ends numberOfGuests Remover
    }//Ends Cycle Method With All Removing Whiles With Ifs
