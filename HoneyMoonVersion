@@ -1,0 +1,90 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * HoneyMoonVersion Class
+**/
+
+import java.util.ArrayList;
+
+public class HoneyMoonVersion extends WeddingVersion 
+{
+   //Instance Variables
+   private ArrayList<String> transportation = new ArrayList<String>(3);
+   private ArrayList<String> placeStaying = new ArrayList<String>(3);
+   private ArrayList<Integer> numberOfDays = new ArrayList<Integer>(3);
+
+   /**
+    * Constructor for objects of class HoneyMoonVersion
+    **/
+   public HoneyMoonVersion() 
+   {
+       this.transportation = transportation;
+       this.placeStaying = placeStaying;
+       this.numberOfDays = numberOfDays;
+   }//End Zero-Constructors
+
+   public HoneyMoonVersion(String LV1, String LV2, String LV3, String SV1, String SV2, String SV3, Integer KV1, Integer KV2,
+                           Integer KV3, String VF1, String VF2, String VF3, String FV1, String FV2, String FV3, Integer VG1, Integer VG2, Integer VG3,
+                           String T1, String T2, String T3, String P1, String P2, String P3, Integer D1, Integer D2, Integer D3) 
+   {
+       super(LV1, LV2, LV3, SV1, SV2, SV3, KV1, KV2, KV3, VF1, VF2, VF3, FV1, FV2, FV3, VG1, VG2, VG3);//Uses Super String due to Inheritance
+       transportation.add(T1);
+       transportation.add(T2);
+       transportation.add(T3);
+       placeStaying.add(P1);
+       placeStaying.add(P2);
+       placeStaying.add(P3);
+       numberOfDays.add(D1);
+       numberOfDays.add(D2);
+       numberOfDays.add(D3);
+   }//End Overloaded Constructor
+
+   public void cycle3() 
+   {
+       //Removes a transportation until only one left
+       for (int i = 0; transportation.size() > 1; i++) {
+           transportation.remove((int)(Math.random() * 5));//Fixed I think
+       }//Ends transportation Remover While
+
+       //Removes a placeStaying until one left
+       for (int i = 0; placeStaying.size() > 1; i++) {
+           placeStaying.remove((int)(Math.random() * 2));
+       }//Ends placeStaying Remover
+
+       //Removes a numberOfDays until one left
+       for (int i = 0; 1 < numberOfDays.size(); i++) {
+           numberOfDays.remove((int)(Math.random() * 3));
+       }//Ends numberOfDays Remover
+   }//Ends Cycle Method With All Removing Whiles With Ifs
+
+   //Getters Section
+   public String getTransportation() 
+   {
+       return transportation.get(1);
+   }//Ends transportation Getter
+
+   public String getPlaceStaying() 
+   {
+       return placeStaying.get(1);
+   }//Ends placeStaying Getter
+
+   public int getNumberOfDays() 
+   {
+       return numberOfDays.get(1);
+   }//Ends numberOfDays Getter
+
+   //Brain Method
+   public String language() 
+   {
+       return "The Language of Love";
+   }//End Abstract Method
+
+   //Print Out Results
+   public String toString() 
+   {
+       String result3;
+       result3 = super.toString() + "\n" + "\n" + "Type of Transportation for Honey Moon: " + getTransportation() + "\n" + "\n" + "Type of Place Staying at for Honey Moon: " + getPlaceStaying() + "\n" + "\n" + "Number of Guests for Honey Moon: " + getNumberOfDays();
+       return result3;
+   }//Ends toString
+}//End Class HoneyMoonVersion
