@@ -1,0 +1,96 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * MASH Class
+**/
+
+import java.util.ArrayList;
+
+public class MASH extends AbstractForMASH
+{
+   //Instance Variables
+   private ArrayList<String> Location = new ArrayList<String>(3);
+   private ArrayList<String> Spouse = new ArrayList<String>(3);
+   private ArrayList<Integer> Kids = new ArrayList<Integer>(3);
+
+   /**
+    *Constructor for objects of class MASH
+    **/
+   public MASH()
+   {
+       this.Location = Location;
+       this.Spouse = Spouse;
+       this.Kids = Kids;
+   }//Ends Zero-Constructor
+
+   public MASH(String L1, String L2, String L3, String S1, String S2, String S3, Integer K1, Integer K2,
+               Integer K3)
+   {
+       Location.add(L1);
+       Location.add(L2);
+       Location.add(L3);
+       Spouse.add(S1);
+       Spouse.add(S2);
+       Spouse.add(S3);
+       Kids.add(K1);
+       Kids.add(K2);
+       Kids.add(K3);
+   }//Ends Overloaded Constructor
+
+   public void cycle1()
+   {
+       //Removes a Location until only one left
+       for(int i=0; Location.size()>i ; i++)
+       {
+           Location.remove((int)(Math.random() * 5));//Fixed I think
+       }//Ends Location Remover
+
+       //Removes a Spouse until one left
+       for(int i=0; Spouse.size()>i; i++)
+       {
+           int Spouses = 3;
+           if(Spouse.size()>1 || Spouse.size()<0)//Double Standards
+           {
+               Spouse.remove((int)(Math.random() * 2));
+               Spouses--;//Counts I could always make a method eventually
+           }//Ends If For Removal
+       }//Ends Spouse Remover
+
+       //Removes a Kids until one left
+       for(int i=0; i<Kids.size(); i++)
+       {
+           Kids.remove((int)(Math.random() * 3));
+       }//Ends Kids Remover
+   }//Ends Cycle Method With All Removing Whiles With Ifs
+
+   //Getters Section
+   public String getLocation()
+   {
+       return Location.get(1);
+   }//Ends Location Getter
+
+   public String getSpouse()
+   {
+       return Spouse.get(1);
+   }//Ends Spouse Getter
+
+   public int getKids()
+   {
+       return Kids.get(1);
+   }//Ends Kids Getter
+
+   //Brain Method
+   public String language()
+   {
+       return "First Language";
+   }//End Abstract Method
+
+   //Prints Out Results
+   public String toString()
+   {
+       String result1;
+       result1 = "\n" + "This is your Future:" + "\n" + "\n" + "Location: " + getLocation() + "\n" + "\n" + "Spouse: "+ getSpouse() + "\n" + "\n" + "Number of Kids: " + getKids();
+       return result1;
+   }//Ends toString
+}//End MASH Class
