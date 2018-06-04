@@ -1,0 +1,91 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * HoneyMoonVersionDriver
+**/
+
+import java.util.Scanner;
+
+public class HoneyMoonVersionDriver 
+{
+   public static void main(String[] args) 
+   {
+       Scanner Scan3 = new Scanner(System.in);// Allows interactive mode
+
+       //Location for Honey Moon
+       System.out.println("Enter your first Location for the Honey Moon: ");
+       String LV1 = Scan3.nextLine();// Allows player to fill ArrayList
+       System.out.println("Enter your second Location for the Honey Moon: ");
+       String LV2 = Scan3.nextLine();
+       System.out.println("Enter your third Location for the Honey Moon: ");
+       String LV3 = Scan3.nextLine();
+
+       //Spouse on Honey Moon Section
+       System.out.println("Enter your first Spouse on the Honey Moon: ");
+       String SV1 = Scan3.nextLine();
+       System.out.println("Enter your second Spouse on the Honey Moon: ");
+       String SV2 = Scan3.nextLine();
+       System.out.println("Enter your third Spouse to the Honey Moon: ");
+       String SV3 = Scan3.nextLine();
+
+       //Honey Moon Favor Section
+       System.out.println("Enter your first Honey Moon Favor: ");
+       String VF1 = Scan3.nextLine();
+       System.out.println("Enter your second Honey Moon Favor: ");
+       String VF2 = Scan3.nextLine();
+       System.out.println("Enter your third Honey Moon Favor: ");
+       String VF3 = Scan3.nextLine();
+
+       //Honey Moon Favor Section
+       System.out.println("Enter your first Type of Flower given by Spouse: ");
+       String FV1 = Scan3.nextLine();
+       System.out.println("Enter your second Type of Flower given by Spouse: ");
+       String FV2 = Scan3.nextLine();
+       System.out.println("Enter your third Type of Flower given by Spouse: ");
+       String FV3 = Scan3.nextLine();
+
+       //Honey Moon Transportation Section
+       System.out.println("Enter your first Type of Transportation to the Honey Moon: ");
+       String T1 = Scan3.nextLine();
+       System.out.println("Enter your second Type of Transportation to the Honey Moon: ");
+       String T2 = Scan3.nextLine();
+       System.out.println("Enter your third Type of Transportation to the Honey Moon: ");
+       String T3 = Scan3.nextLine();
+
+       //Honey Moon placeStaying Section
+       System.out.println("Enter your first Type of Place Staying at for the Duration: ");
+       String P1 = Scan3.nextLine();
+       System.out.println("Enter your second Type of Place Staying at for the Duration: ");
+       String P2 = Scan3.nextLine();
+       System.out.println("Enter your third Type of Place Staying at for the Duration: ");
+       String P3 = Scan3.nextLine();
+
+       //Guests at Honey Moon Section
+       System.out.println("Enter your first Number of Guests at the Honey Moon: ");
+       int VG1 = Scan3.nextInt();
+       System.out.println("Enter your second Number of Guests at the Honey Moon: ");
+       int VG2 = Scan3.nextInt();
+       System.out.println("Enter your third Number of Guests at the Honey Moon: ");
+       int VG3 = Scan3.nextInt();
+
+       //Kids Honey Moon Section
+       System.out.println("Enter your first Number of Kids your spouse and you want: ");
+       int KV1 = Scan3.nextInt();
+       System.out.println("Enter your second Number of Kids your spouse and you want: ");
+       int KV2 = Scan3.nextInt();
+       System.out.println("Enter your third Number of Kids your spouse and you want: ");
+       int KV3 = Scan3.nextInt();
+
+       //Number of Days at Honey Moon Section
+       System.out.println("Enter your first Number of Days on the Honey Moon: ");
+       int D1 = Scan3.nextInt();
+       System.out.println("Enter your second Number of Days on the Honey Moon: ");
+       int D2 = Scan3.nextInt();
+       System.out.println("Enter your third Number of Days on the Honey Moon: ");
+       int D3 = Scan3.nextInt();
+
+       WeddingVersion game3 = new HoneyMoonVersion(LV1, LV2, LV3, SV1, SV2, SV3, KV1, KV2, KV3, VF1, VF2, VF3, FV1, FV2, FV3, VG1, VG2, VG3, T1, T2, T3, P1, P2, P3, D1, D2, D3);//Creates the object so the player can recieve results
+       System.out.println(game3.toString() + "\n" + "\n" + "Language Used During Honey Moon: " + game3.language());// Prints results
+   }//End Method Main
+}//End HoneyMoonVersionDriver
