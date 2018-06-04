@@ -1,0 +1,59 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * toShowPrintedArray
+**/
+
+import java.util.ArrayList;
+
+public class toShowPrintedArray// this will be for only Location of MASH
+{
+   public static ArrayList<String> Location1 = new ArrayList<String>(3);
+
+   //the variable has to be static to be used by the driver in this sense
+   public toShowPrintedArray() 
+   {
+       this.Location1 = Location1;
+   }//Ends Zero-Constructor
+
+   public toShowPrintedArray(String L1, String L2, String L3) 
+   {
+       Location1.add(L1);
+       Location1.add(L2);
+       Location1.add(L3);
+   }//Ends Overloaded Constructor
+
+   //I swear some of the stuff in this game can be useful,
+   //but I prefer to keep it none
+
+   //Method to adhere to move
+   public static String[] ArrayListToArray(ArrayList<String> AL) 
+   {
+       ArrayList<String> arr1 = new ArrayList<>(AL);
+       String[] Location1 = new String[arr1.size()];
+
+       for (int countL = 0; countL < arr1.size(); countL++) 
+       {
+           if (arr1.get(countL) != null) 
+           {
+               Location1[countL] = arr1.get(countL);
+           } else 
+           {
+               //nothing
+           }
+       }//Ends For that moves data if called
+
+       return Location1;
+   }//End Method to move for Location
+
+   public static void printArray(String[] arr) 
+   {
+       for (String Arr : arr) 
+       {
+           System.out.println(Arr);
+       }//Ends for each
+   }//Ends Method to Print out Array
+
+}//Ends toShowPrintedArray
+
