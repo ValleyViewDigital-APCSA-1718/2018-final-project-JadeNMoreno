@@ -1,0 +1,89 @@
+
+/**
+ * Jade Moreno
+ * 05/23/18
+ * WeddingVersion Class
+**/
+
+import java.util.ArrayList;
+
+public class WeddingVersion extends MASH 
+{
+   //Instance Variables
+   private ArrayList<String> weddingFavors = new ArrayList<String>(3);
+   private ArrayList<String> Flowers = new ArrayList<String>(3);
+   private ArrayList<Integer> numberOfGuests = new ArrayList<Integer>(3);
+
+   /**
+    * Constructor for objects of class WeddingVersion
+    **/
+   public WeddingVersion() 
+   {
+       this.weddingFavors = weddingFavors;
+       this.Flowers = Flowers;
+       this.numberOfGuests = numberOfGuests;
+   }//End Zero-Constructors
+
+   public WeddingVersion(String LW1, String LW2, String LW3, String SW1, String SW2, String SW3, Integer KW1, Integer KW2,
+                         Integer KW3, String WF1, String WF2, String WF3, String F1, String F2, String F3, Integer G1, Integer G2, Integer G3) 
+   {
+       super(LW1, LW2, LW3, SW1, SW2, SW3, KW1, KW2, KW3);//Uses Super String due to Inheritance
+       weddingFavors.add(WF1);
+       weddingFavors.add(WF2);
+       weddingFavors.add(WF3);
+       Flowers.add(F1);
+       Flowers.add(F2);
+       Flowers.add(F3);
+       numberOfGuests.add(G1);
+       numberOfGuests.add(G2);
+       numberOfGuests.add(G3);
+   }//End Overloaded Constructor
+
+   public void cycle2() 
+   {
+       //Removes a weddingFavors until only one left
+       for (int i = 0; weddingFavors.size() > 1; i++) {
+           weddingFavors.remove((int)(Math.random() * 5));//Fixed I think
+       }//Ends weddingFavors Remover While
+
+       //Removes a Flowers until one left
+       for (int i = 0; Flowers.size() > 1; i++) {
+           Flowers.remove((int)(Math.random() * 2));
+       }//Ends Flowers Remover
+
+       //Removes a numberOfGuests until one left
+       for (int i = 0; 1 < numberOfGuests.size(); i++) {
+           numberOfGuests.remove((int)(Math.random() * 3));
+       }//Ends numberOfGuests Remover
+   }//Ends Cycle Method With All Removing Whiles With Ifs
+
+   //Getters Section
+   public String getWeddingFavors() 
+   {
+       return weddingFavors.get(1);
+   }//Ends weddingFavors Getter
+
+   public String getFlowers() 
+   {
+       return Flowers.get(1);
+   }//Ends Flowers Getter
+
+   public int getNumberOfGuests() 
+   {
+       return numberOfGuests.get(1);
+   }//Ends numberOfGuests Getter
+
+   //Brain Method
+   public String language() 
+   {
+       return "Ceremony";
+   }//End Abstract Method
+
+   //Print Out Results
+   public String toString() 
+   {
+       String result2;
+       result2 = super.toString() + "\n" + "\n" + "Favors: " + getWeddingFavors() + "\n" + "\n" + "Type of Flowers: " + getFlowers() + "\n" + "\n" + "Number of Guests: " + getNumberOfGuests();
+       return result2;
+   }//Ends toString
+}//End Class WeddingVersion
